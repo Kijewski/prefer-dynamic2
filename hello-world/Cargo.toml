@@ -1,0 +1,10 @@
+[package]
+name = "hello-world"
+version = "0.1.0"
+edition = "2021"
+publish = false
+license = "MIT OR Apache-2.0"
+rust-version = "1.77"
+
+[dependencies]
+prefer-dynamic2 = { version = "0.2.0", path = "../prefer-dynamic2" }

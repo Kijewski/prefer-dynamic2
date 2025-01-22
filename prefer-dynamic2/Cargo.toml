@@ -1,0 +1,16 @@
+[package]
+name = "prefer-dynamic2"
+version = "0.2.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+keywords = ["dylib", "prefer-dynamic", "cargo"]
+categories = ["development-tools::build-utils"]
+repository = "https://github.com/Kijewski/prefer-dynamic2"
+description = "Copies the pre-compiled dynamic `std` library to your target directory, for `-Cprefer-dynamic` and `dylib` crates"
+rust-version = "1.77"
+
+[package.metadata.docs.rs]
+rustdoc-args = ["--generate-link-to-definition", "--cfg=docsrs"]
+
+[target.'cfg(target_os = "windows")'.build-dependencies]
+junction = "1.0.0"
