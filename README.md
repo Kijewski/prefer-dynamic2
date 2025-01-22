@@ -12,15 +12,15 @@ with `-Cprefer-dynamic`.
 Add to your `Cargo.toml`:
 
 ```toml
-[dependencies]
-prefer-dynamic = "0.2.0"
+[target.'cfg(any(unix, windows))'.dependencies]
+prefer-dynamic2 = "0.2.0"
 
-[dev-dependencies]
-prefer-dynamic = "0.2.0"
+[target.'cfg(any(unix, windows))'.dev-dependencies]
+prefer-dynamic2 = "0.2.0"
 ```
 
-Create a file in the manifest root of your project: `.cargo/config.toml`
-(create the folder if it does not exists):
+Create or edit `.cargo/config.toml` in the manifest root of your project
+(create the folder `.cargo` if it does not exists), and add:
 
 ```toml
 [target.'cfg(any(unix, windows))']
