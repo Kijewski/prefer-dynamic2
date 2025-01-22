@@ -13,4 +13,4 @@ rust-version = "1.77"
 rustdoc-args = ["--generate-link-to-definition", "--cfg=docsrs"]
 
 [target.'cfg(target_os = "windows")'.build-dependencies]
-junction = "1.0.0"
+junction = "1.2.0"
